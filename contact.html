@@ -39,11 +39,26 @@
             <h1>Contact</h1>
             <form id="contactForm">
                 <div class="form-group">
+
                     <input class="form-control" name="firstName" id="firstName" placeholder="First name" />
-                    <div class="form-error" id="firstNameError">Please enter your name</div>
+                    <div class="form-error" id="firstNameError">Please enter your First Name</div>
+
+                    <input class="form-control" name="lastName" id="lastName" placeholder="Last name" />
+                    <div class="form-error" id="lastNameError">Please enter Last Name</div>
+
+                    <input class="form-control" name="email" id="email" placeholder="Email" />
+                    <div class="form-error" id="emailError">Please enter your Email</div>
+
+                    <input class="form-control" name="subject" id="subject" placeholder="Subject" />
+                    <div class="form-error" id="subjectError">Subject mustt have more than 10 words</div>
+
+                    <textarea class="form-control" name="message" id="message" placeholder="Message" ></textarea>
+                    <div class="form-error" id="messageError">Message msut be more than 15 </div>
+
                 </div>
 
                 <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                <div class="success"></div>
             </form>
         </main>
 
