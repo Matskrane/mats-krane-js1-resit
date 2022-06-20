@@ -2,18 +2,18 @@ const url = "https://v2.jokeapi.dev/joke/Any?amount=10";
 const displayJokes = document.querySelector(".results");
 
 async function getJokes() {
-    try {
-      const response = await fetch(url);
-      const jokes = await response.json();
-      console.log(jokes);
+  try {
+    const response = await fetch(url);
+    const jokes = await response.json();
+    console.log(jokes);
 
-      for (let i of Object.keys(jokes.jokes)) {
-        console.log(i);
-        if (i >= 5) {
-          break;
-        }
+    for (let i of Object.keys(jokes.jokes)) {
+      console.log(i);
+      if (i >= 5) {
+        break;
+      }
 
-        displayJokes.innerHTML += `         
+      displayJokes.innerHTML += `         
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="card">
             <div class="joke-detail">
@@ -24,12 +24,12 @@ async function getJokes() {
           </div>
         </div>
         `;
-      }
-
-    } catch (error) {
-      console.log(error);
-      displayJokes.innerHTML = ("error", error);
     }
+    
+  } catch (error) {
+    console.log(error);
+    displayJokes.innerHTML = ("error", error);
+  }
 }
   
 getJokes();
